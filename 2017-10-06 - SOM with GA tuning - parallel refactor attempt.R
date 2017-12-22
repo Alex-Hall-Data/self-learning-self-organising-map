@@ -6,9 +6,12 @@
 #TODO - DROP PAYING USERS INTO THE MAP AT INTERVALS BEFORE THEY PAY (USE FUNCTION FROM SHARED LIBRARY TO GET EVENTS BEFORE THEY PAY)
 #LOOKS LIKE THE MAP.KOHONEN FUNCTION DOES THIS. IF THAT FAILS, CAN GET CODEBOOK VECTORS (getCodes) AND FIND NEAREST NODE TO EACH INPUT
 
+
 #SOM script for data exploration.
 #to use, select parameters and whether sampling is used (top section)
 
+#INSETR PATH TO DATASET HERE
+filepath <- 
 
 library(kohonen)
 library(RColorBrewer)
@@ -111,7 +114,7 @@ clamp_parameters<-function(xd,yd,radius,rlen,default_som_length,max_map_aspect_r
 #load in dataset
 #######################################################
 
-load("//nas01/analytics/Analytics Projects and Results/Segmentation using unsupervised learning/cc_data_for_segmentation.Rdata")
+load(filepath)
 
 if(use_sample){
 player_df <- sample_n(player_df,sample_size)
